@@ -1,0 +1,73 @@
+[
+  {
+    "value": 18,
+    "value1": 18,
+    "date": "2021-10-20 10:00:00",
+    "minutesPerOrder": 5
+  },
+  {
+    "value": 20,
+    "value1": 25,
+    "date": "2021-10-20 11:00:00",
+    "minutesPerOrder": 7
+  },
+  {
+    "value": 28,
+    "value1": 40,
+    "date": "2021-10-20 12:00:00",
+    "minutesPerOrder": 6
+  },
+  {
+    "value": 42,
+    "value1": 48,
+    "date": "2021-10-20 13:00:00",
+    "minutesPerOrder": 5
+  },
+  {
+    "value": 55,
+    "value1": 58,
+    "date": "2021-10-20 14:00:00",
+    "minutesPerOrder": 7
+  },
+  {
+    "value": 78,
+    "value1": 65,
+    "date": "2021-10-20 15:00:00",
+    "minutesPerOrder": 6
+  },
+  {
+    "value": 85,
+    "value1":75,
+    "date": "2021-10-20 16:00:00",
+    "minutesPerOrder": 5
+  },
+  {
+    "value": 90,
+    "value1": 78,
+    "date": "2021-10-20 17:00:00",
+    "minutesPerOrder": 7
+  },
+  {
+    "value": 100,
+    "value1": 80,
+    "date": "2021-10-20 18:00:00",
+    "minutesPerOrder": 5
+  },
+  {
+    "value": 120,
+    "date": "2021-10-20 19:00:00"
+  },
+  {
+    "value": 130,
+    "date": "2021-10-20 20:00:00"
+  },
+  {
+    "value": 150,
+    "date": "2021-10-20 21:00:00"
+  },
+  {
+    "value": 170,
+    "date": "2021-10-20 22:00:00"
+  }  
+  
+]

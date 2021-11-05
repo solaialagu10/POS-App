@@ -1,0 +1,32 @@
+<mat-card class="container">    
+    <mat-card-content id="delivery" #delivery>
+        <div id="chartAndDataContainer">
+            <div id="chartContainer">
+                <div class="orderText">
+                    Store Orders                                    
+                </div>
+                <div class="storeImage">                                        
+                </div>
+                <app-area-chart #areaChart [data]="chartData[0]" [type]="chartA"></app-area-chart>
+                <div class="chartLabels">                 
+                    <div style="display:flex;"><div class="labelImage1"></div> <div class="labelText"> Forecasted Orders</div></div>     
+                   <div style="display:flex;"><div class="labelImage2"></div> <div class="labelText"> Actual Orders</div></div>    
+                   <div style="display:flex;"><div class="labelImage3"></div> <div class="labelText"> Minutes Per Order</div></div>                       
+                </div>
+            </div>        
+            <div id="chartContainer">
+                <div class="orderText">
+                    Digital Orders                    
+                </div>
+                <div class="digitalImage">                                        
+                </div>
+                <app-area-chart #areaChart [data]="chartData1[0]" [type]="chartB"></app-area-chart>
+                <div class="chartLabels">                   
+                    <div style="display:flex;"><div class="labelImage1"></div> <div class="labelText">Forecasted Orders</div></div>     
+                    <div style="display:flex;"><div class="labelImage2"></div> <div class="labelText"> Actual Orders</div></div>    
+                    <div style="display:flex;"><div class="labelImage3"></div> <div class="labelText"> Minutes Per Order</div></div>                    
+                </div>
+            </div>         
+        </div>        
+    </mat-card-content>
+</mat-card>

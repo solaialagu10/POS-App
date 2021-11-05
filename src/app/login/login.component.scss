@@ -1,0 +1,48 @@
+.loginContainer{
+    background-color: #ebe2dd;
+    padding: 12% 0;
+    .signInWrapper{
+        width: 480px;
+        border: 1px solid #6b321b;
+        height: auto;
+        margin: 0 auto;
+        background-color: #fff !important;
+        .logoImg{
+            margin-top: 24px;
+        }
+        .contentLogin{
+            text-align: center;
+        }
+        .signIn{
+            font-size: 30px;
+            color: #6b321b;
+            font-weight: bold;
+        }
+        .loginbtn{
+            width: 286px;
+            background-color: #6b321b;
+            color: #fff;
+            font-size: 22px;
+            height: 38px;
+            border: none !important;
+            font-weight: bold;
+            margin: 24px 0 36px 0;
+        }
+        .inputBox{
+            width:275px;
+            height: 34px;
+            border: 1px solid #AAA; 
+            border-radius: 5px;
+        }
+        input{
+            padding-left: 8px;
+            &:focus{
+                outline: none !important;
+            }
+            
+         }
+        
+          
+    }
+    
+}

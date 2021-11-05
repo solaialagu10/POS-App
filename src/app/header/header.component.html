@@ -1,0 +1,57 @@
+<div class="headerWrap">
+                <div class="calendarImg"> 
+                    <img class="image" src="../../assets/calendar.png">
+                </div>
+                <div class="calendar"> 
+                    <span class="details"> {{currentdate | date: 'd MMM, y'}}</span>
+                </div>
+                <div class="timeImg">
+                    <img class="image" src="../../assets/clock2.jpg">
+                </div>
+                <div class="time">
+                    <span class="details"> {{currentTime | date: 'shortTime'}}</span>
+                </div>
+                <div class="search">
+                    <input type="text" class="searchbox no-outline" placeholder="Search Here">
+                </div>
+                <div class="location">
+                    <img src="../../assets/notification2.jpg" class="image loc" (click)="showNotification(true)">
+                    <sup class="power" *ngIf="notificationArray.length>0"><b>{{notificationArray.length}}</b></sup>
+                    <div class="notificationDetails" *ngIf="showNotificationDiv && notificationArray.length>0">
+                        <img src="../../assets/close.png" class="close"  (click)="showNotification(false)">
+                        <div class="contentSize" *ngFor="let noti of notificationArray;let i=index">
+                           {{i+1}}. {{noti?.detail}}
+                            <label class="timeNotification">  {{noti?.time}} </label><br>
+                              <button class="accept" (click)="hideNoti(i)">Accept</button> &nbsp;
+                              <button class="decline" (click)="hideNoti(i)">Ignore</button><br>
+                              <hr *ngIf="i<notificationArray.length-1">
+                          </div>  
+                    </div>
+                    <div class="notificationDetails" *ngIf="showNotificationDiv && notificationArray.length==0">
+                        <img src="../../assets/close.png" class="close"  (click)="showNotification(false)">
+                        <div class="contentSize">
+                            <span class="empty">You have no new notifications.</span>
+                          </div>  
+                    </div>
+                </div>
+                <div class="locationDetails">
+                        <p class="address">200 South 6th St</p>
+                        <p class="address">Minneapolis,MN 55402</p>
+                </div>
+                <div class="loginImg">
+                    <img src="../../assets/login.PNG" class="image">
+                </div>
+                <div class="login">
+                    <span class="details">James Smith</span>
+                </div>
+                <div class="dropDown">
+                    <img src="../../assets/down.PNG" class="image" (click)="showDropdown()">
+                    <div class="dropDownDetails" *ngIf="showUserDropdown" (mouseleave)="showDropdown()">
+                        <p class="info">Store Manager</p>
+                        <p class="info last">Store No : 0555</p>
+                        <button class="logout" (click)="logout()">LogOut</button>
+                    </div>
+                </div>
+
+            </div>
+        

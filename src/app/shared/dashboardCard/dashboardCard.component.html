@@ -1,0 +1,78 @@
+
+  <mat-card class="example-card" 
+  [class]="titleValue === 'Order Processing Time' ? 'border-amber' : 'border-green'">
+      <mat-card-header>       
+        <mat-card-header-text>
+          <mat-card-title>
+            {{titleValue}}
+            <div [class]="imageClass"></div>
+          </mat-card-title> 
+         </mat-card-header-text> 
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <span *ngIf="titleValue === 'Sales'">$</span>{{count}} 
+        </p>
+        <div class="content-1">{{content1}} <span *ngIf="titleValue === 'Sales'">{{updateTime | date: 'shortTime'}}</span></div>
+        <div class="content-2" [style]="titleValue === 'Sales' ? 'display:none' : ''">
+          <div class="content-3">
+              <div>
+                <div class="subContent-3">Digital: </div>
+                <div class="subContent-4" [style]="digitalB === 'Mins' ? 'display:none' : ''"><label>{{digitalA}}</label>/<label>{{digitalB}}</label> 
+                </div>
+                <div class="subContent-4a" [style]="digitalB !== 'Mins' ? 'display:none' : ''">
+                  <label>{{digitalA}}</label>
+                  <label>{{digitalB}}</label> 
+                </div>
+              </div>
+              <div>
+              <div class="subContent-3">Walk-In: </div>
+              <div class="subContent-4" [style]="digitalB === 'Mins' ? 'display:none' : ''"><label>{{walkINA}}</label>/<label>{{walkINB}}</label> 
+              </div>
+              <div class="subContent-4a" [style]="digitalB !== 'Mins' ? 'display:none' : ''">
+                <label>{{walkINA}}</label>
+                <label>{{walkINB}}</label> 
+              </div>
+              
+              </div>
+              
+          </div>
+          <div class="content-5" [style]="titleValue === 'Order Processing Time' ? 'display:none' : ''">
+              <div>{{contentA}}</div>
+              <div>{{contentB}}</div>
+          </div>
+          <div class="content-5a" [style]="titleValue !== 'Order Processing Time' ? 'display:none' : ''">
+            <div></div>
+            <div>{{contentB}}</div>
+        </div>
+        </div>
+        <div class="content-3a" [style]="titleValue !== 'Sales' ? 'display:none' : ''">               
+          <div class="subcontent-3a" [style]="titleValue === 'Order Processing Time' ? 'display:none' : ''">
+              <div>{{contentA}}</div>
+              <div>${{contentB}}</div>
+          </div>          
+        </div>
+        <div class="content-7" [style]="titleValue !== 'Sales' ? 'display:none' : ''">
+              <section class="example-section" >
+                <div><b>${{differenceValue}}</b> to reach the target
+                  <div>
+                    ${{count}}
+                  </div>
+                  <div>
+                    ${{contentB}} 
+                  </div>
+                </div>
+                <mat-progress-bar
+                  mode="determinate" 
+                  [value]="value"
+                  [color]="color"
+                  class="progress-bar-1">
+                  </mat-progress-bar>
+                </section>
+        </div>
+        <div class="content-6" [style]="titleValue === 'Sales' ? 'display:none' : ''">
+             <span (click)="navigate(titleValue)">More details ></span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  

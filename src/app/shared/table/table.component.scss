@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+    background-color: white;   
+    box-shadow: none;
+    .mat-header-row,.mat-row{
+        font-size:12px;
+    } 
+    .mat-header-cell,.mat-cell,.mat-footer-cell{
+        border-bottom : 1px solid #f0f0f0;
+    }
+    .mat-cell{
+        color:#7c7b7c;
+        font-size: 11px;
+    }
+    .mat-header-cell:nth-child(n+2), .mat-cell:nth-child(n+2) {
+            text-align: center;
+    }
+  }
+  .table-title{
+    background-color: white;    
+    padding:25px 10px;
+    border-radius: 6px;
+    label{
+        font-weight:600;
+        font-size: 12px;
+    padding-left: 22px;
+    }
+  }
+
+  .green-class{
+     color:#aaee64 !important;
+  }
+  .orange-class{
+    color:#f2b34f !important;
+  }

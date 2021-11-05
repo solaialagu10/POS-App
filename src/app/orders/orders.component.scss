@@ -1,0 +1,164 @@
+
+.container {
+    min-width: 350px;
+    width: auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
+    background-color: transparent;
+    // background: white;
+    box-shadow: none;
+    transform: translateY(-20px);
+    #delivery {
+        height: auto;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        #chartAndDataContainer {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            background-color: transparent;
+            height: 110%;
+            width: 100%;
+            #chartContainer {
+                // display: flex;
+                // background-color: #EAFAF1;
+                // justify-content: center;
+                // align-items: center;
+                height: 300px;
+                // width: 97%;
+                margin:5px;
+                background:white;
+                padding:10px;
+                border-radius: 5px;
+                overflow-y: scroll;
+                overflow-y: auto;
+                max-height: 250px;
+                padding-left: 3em;            
+                app-area-chart {
+                    // display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .half {
+                height: 50%;
+            }     
+        }
+    }
+}
+
+
+#chartContainer::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  #chartContainer::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    border-radius: 10px;
+  }
+   
+  #chartContainer::-webkit-scrollbar-thumb {
+    // background-color: darkgrey;
+    // outline: 1px solid slategrey;
+    background-color: #d4aa70;
+    border-radius: 10px;
+  }
+
+
+mat-option ::ng-deep .city {
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        .title {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        .title {
+            font-size: 1rem;
+        }
+    }
+}
+
+.orderText{
+    display: inline-block;
+    color: black;
+    font-size: 14px;
+    padding-left: 33%;
+    font-weight: 600;
+    transform: translateY(-12px);
+    padding-bottom: 5px;
+}
+.storeImage{
+    display: inline-block;
+    background-image: url('../icons/Storeorders.png' );
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+.digitalImage{
+    display: inline-block;
+    background-image:url('../icons/Digitalorders.png') ;
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;  
+    margin-left: 5px;
+}
+.chartLabels{
+    width: 120px;
+    height: 75px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 1px #d4aa70;
+    border-radius: 5px;
+    transform: translateY(-120px);
+    display: inline-block;
+    .labelText{        
+        display: inline-block;
+        padding-left: 10px;
+        white-space: nowrap;
+        font-size: 11px;
+        padding-top: 5px;
+    }
+}
+.labelImage1{
+    background-image:url('../icons/forecastLabel.png') ;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat; 
+    padding-bottom: 6px;
+   
+}
+.labelImage2{
+    background-image:url('../icons/ActualOrders.png') ;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;  
+    padding-bottom: 5px;
+    transform: translateX(-1px);
+   
+}
+.labelImage3{
+    background-image:url('../icons/MinutesPerOrder.png') ;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;  
+    padding-bottom: 5px;
+    transform: translateY(-3px);    
+}

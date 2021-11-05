@@ -1,0 +1,46 @@
+mat-grid-list {
+  margin: 0 auto;
+  max-width: 1280px;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  nav {
+    transform:translateY(-10em);
+  }
+  nav a {
+    // padding: 0.5rem;
+    text-decoration: none;
+    // margin-top: 10px;
+    display: block;
+    // background-color: #e8e8e8;
+    color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 0.5rem 45px;
+  }
+  
+  nav a:hover {
+    color: #ed960b;
+  }
+
+  .activeClass{
+    color: #ed960b !important;
+    border-right:5px solid #ed960b;
+  }
+  
+  mat-grid-tile:nth-child(2){
+    border-radius: 20px 2px 2px 20px;
+    transform: translateX(-20px);
+      .mat-grid-tile-content{
+        display: list-item !important;
+    }
+  }
+ .header{
+   margin: 0 auto;
+   max-width: 1440px;
+ }
+ .loginComponent{
+  margin: 0 auto;
+  max-width: 1280px;
+ }

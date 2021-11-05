@@ -1,0 +1,128 @@
+<div class="dashboard-class">
+<div class="card-wrapper-1">
+  <dashboardCard-template [title]="title" 
+    [imageClass]="imageClass" 
+    [count]="count"
+    [content1]="content"
+    [digitalA]="digitalA"
+    [digitalB]="digitalB"
+    [walkINA]="walkINA"
+    [walkINB]="walkINB"
+    [contentA]="contentA"
+    [contentB]="contentB">
+  </dashboardCard-template>
+  <dashboardCard-template [title]="title1" 
+    [imageClass]="imageClass1" 
+    [count]="count1"
+    [content1]="content1"
+    [digitalA]="digital1A"
+    [digitalB]="digital1B"
+    [walkINA]="walkIN1A"
+    [walkINB]="walkIN1B"
+    [contentA]="content1A"
+    [contentB]="content1B">
+  </dashboardCard-template>
+  <dashboardCard-template [title]="title2" 
+    [imageClass]="imageClass2" 
+    [count]="count2"
+    [content1]="content2"
+    [digitalA]="digital2A"
+    [digitalB]="digital2B"
+    [walkINA]="walkIN2A"
+    [walkINB]="walkIN2B"
+    [contentA]="content2A"
+    [contentB]="content2B">
+  </dashboardCard-template>
+  <dashboardCard-template [title]="title3" 
+    [imageClass]="imageClass3" 
+    [count]="count3"
+    [content1]="content3"
+    [contentA]="content3A"
+    [contentB]="content3B">
+  </dashboardCard-template>
+</div>
+<div class="card-wrapper-2">
+    <mat-card class="example-card-2">
+        <mat-card-header>       
+          <mat-card-header-text><mat-card-title>Restaurant Health</mat-card-title>  </mat-card-header-text> 
+        </mat-card-header>
+        <mat-card-content>
+          <div class="content-1">
+            <div><div> Healthy              
+            </div></div>
+            <mat-progress-bar
+              mode="determinate" 
+              [value]="health">
+            </mat-progress-bar>
+          </div>
+          <div class="content-2">
+            
+           <div><div><label>{{healthyDevices}}</label> Devices Healthy</div></div>
+           <div><div><label>{{faultyDevices}}</label> Device Faulty</div></div>
+          </div>
+          <div class="content-3" >
+           <span class="link" (click)="gotoSupport()">More details ></span> 
+       </div>         
+        </mat-card-content>
+      </mat-card>    
+      <mat-card class="example-card-3">
+        <mat-card-header>       
+          <mat-card-header-text><mat-card-title>Forecast</mat-card-title>
+          <div>For next 60 Minutes</div>
+          </mat-card-header-text> 
+        </mat-card-header>
+        <mat-card-content>    
+          <div class="content-1">
+            <div class="wrapper-div"><div class="digitalImage"></div> <div class="count">{{digitalOrders}}</div> <div class="text">Orders(Digital)</div></div>
+            <div class="wrapper-div"><div class="walkInImage"></div> <div class="count">{{walkInOrders}} </div> <div class="text">Orders(Walk-In)</div></div>
+           </div>  
+           <div class="content-2">
+            <div class="wrapper-div"><div class="image1"></div> <div class="text">{{order1}}</div> <div class="count">{{order1Value}}</div></div>
+            <div class="wrapper-div"><div class="image2"></div> <div class="text">{{order2}} </div> <div class="count">{{order2Value}}</div></div>
+            <div class="wrapper-div"><div class="image3"></div> <div class="text">{{order3}} </div> <div class="count">{{order3Value}}</div></div>
+           </div>  
+        </mat-card-content>
+      </mat-card>    
+      <mat-card class="example-card-4">
+        <mat-card-header>       
+          <mat-card-header-text>
+            <mat-card-title>Special Updates</mat-card-title>
+            <div>&nbsp;&nbsp; &nbsp;{{currentDate | date: 'd MMM, y'}}</div>
+            </mat-card-header-text> 
+        </mat-card-header>
+        <mat-card-content> 
+          <div class="top-content">
+           <div class="content-1">
+              <div class="img">  </div>
+               <div class="text">Sunny, No Rains</div>
+            </div>
+            <div class="content-2">
+              <div class="img"></div>
+              <div class="text">70F</div>
+            </div>
+            <div class="content-3">
+              <div class="img"></div>
+              <div class="text">No Forecast for rain for next 120 mins</div>
+            </div>
+          </div>
+          <div class="bottom-content">
+            <div class="left">
+              <div class="left-1">   
+                <div class="img"></div>
+                <div class="text">Chipotle Love</div>
+              </div>
+              <div class="left-2"> 
+               <div class="cont1"> <div class="img1"></div><div class="text">3.7k</div> </div>          
+               <div class="cont2"> <div class="img2"></div><div class="text">5.2k</div> </div>
+              </div> 
+            </div>
+            <div class="right">   
+              <div class="img"></div>    
+              <div class="text1">Vikings Vs Pacers</div>
+              <div class="text2">04:00PM to 06:00 PM Today</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>    
+    </div>
+</div>

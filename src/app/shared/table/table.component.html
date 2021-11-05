@@ -1,0 +1,29 @@
+
+  <div>
+    <div class="table-title"><label>Staff Details</label>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name of Associates </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="time">
+      <th mat-header-cell *matHeaderCellDef> Clocked in Time </th>
+      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="timeLate">
+      <th mat-header-cell *matHeaderCellDef> On time/Late </th>
+      <td mat-cell *matCellDef="let element" [ngClass]="element.timeLate === 'On Time' ? 'green-class' : 'orange-class'"> {{element.timeLate}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+</div>

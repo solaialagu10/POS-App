@@ -1,0 +1,42 @@
+.chartWrapper{
+    .bar{
+        // transform: translateY(-50px);
+        border-radius:1px;
+    }    
+    body { font: 12px Arial;}  
+   
+}
+
+div #tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background:#71b9f8;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+div #tooltip1 {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: #47d086;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+.barText{
+    font-weight:700;
+    font-size:12px;   
+    fill:#f7a015; 
+    text-anchor: middle;
+    transform: translate(2px,-5px);
+}

@@ -1,0 +1,16 @@
+<div class="loginContainer">
+   <div class="signInWrapper">
+       <div class="contentLogin">
+       <img src="../../assets/logo.svg" class="logoImg">
+       <p class="signIn">SIGN IN</p>
+       <p>
+        <input type="text" class=" inputBox no-outline" [(ngModel)]="email" placeholder="Email">
+       </p>
+       <p>
+        <input type="password" class="inputBox no-outline" [(ngModel)]="password" placeholder="Password">
+       </p>
+       <button type="submit" class="loginbtn" (click)="signIn()">SIGN IN</button>
+
+    </div>
+   </div>
+</div>

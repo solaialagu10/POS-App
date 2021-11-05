@@ -1,0 +1,24 @@
+
+<div *ngIf="loggedIn">
+  <mat-grid-list cols="6">
+    <mat-grid-tile colspan="1" [style.background]="'#1b0800'" rowspan="3" >
+      <nav>
+            <a routerLink="/dashboardPage" routerLinkActive="activeClass" [routerLinkActiveOptions]="{exact: true}">Dashboard</a>        
+            <a routerLink="/ordersPage"  routerLinkActive="activeClass" [routerLinkActiveOptions]="{exact: true}">Orders</a>        
+            <a routerLink="/inventoryPage"  routerLinkActive="activeClass" [routerLinkActiveOptions]="{exact: true}">Inventory <div></div></a>       
+            <a routerLink="/associatesPage"  routerLinkActive="activeClass" [routerLinkActiveOptions]="{exact: true}">Associates</a>       
+            <a routerLink="/supportPage"  routerLinkActive="activeClass" [routerLinkActiveOptions]="{exact: true}">Support</a>        
+    </nav></mat-grid-tile>
+    
+    <mat-grid-tile colspan="5" [style.background]="'#ebe2dd'"  rowspan="3" >
+        <app-header (logoutEmit)="logout()"></app-header>
+        <router-outlet></router-outlet>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <app-card-component></app-card-component>
+</div>
+<div class="loginComponent" *ngIf="!loggedIn">
+  <app-login (sendParent)="checkLogin()"></app-login>
+</div>
+
+
